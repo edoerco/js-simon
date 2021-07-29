@@ -4,6 +4,8 @@
 
 var numeriGenerati = 5;
 var listaNumeri = [];
+var secondi = 2000;  //i secondi dell'esercizio sono 30 (30000)
+var numeriUtente = [];
 
 
 // Un alert() espone 5 numeri generati casualmente.
@@ -11,6 +13,9 @@ for(i = 0; i < numeriGenerati; i++) {
     pushInArray(listaNumeri, rndNumber(1, 100));
 };
 alert(listaNumeri);
+console.log(listaNumeri);
+
+setTimeout(pippo, secondi);
 
 
 
@@ -25,5 +30,15 @@ function rndNumber(min, max) {
 function pushInArray(array, numero) {
         return array.push(numero);
 };
+
+function pippo() {
+    for(i = 0; i < numeriGenerati; i++) {
+        var risposta = parseInt(prompt('Inserisci il numero che ti ricordi'));
+        if(listaNumeri.includes(risposta) == true) {
+            pushInArray(numeriUtente, risposta);
+        }
+    }
+    console.log('i numeri indovinati sono: ' + numeriUtente);
+}
 
 
