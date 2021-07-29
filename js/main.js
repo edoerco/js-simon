@@ -15,7 +15,7 @@ for(i = 0; i < numeriGenerati; i++) {
 alert(listaNumeri);
 console.log(listaNumeri);
 
-setTimeout(pippo, secondi);
+setTimeout(handler, secondi);
 
 
 
@@ -31,7 +31,7 @@ function pushInArray(array, numero) {
         return array.push(numero);
 };
 
-function pippo() {
+function handler() {
     for(i = 0; i < numeriGenerati; i++) {
         var risposta = parseInt(prompt('Inserisci il numero che ti ricordi'));
         if(listaNumeri.includes(risposta) == true) {
@@ -39,6 +39,7 @@ function pippo() {
         }
     }
     console.log('i numeri indovinati sono: ' + numeriUtente);
+    console.log('Hai indovinato ' + numeriUtente.length + ' numeri');
 }
 
 
